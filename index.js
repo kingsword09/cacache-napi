@@ -73,7 +73,7 @@ function requireNative() {
   } else if (process.platform === 'android') {
     if (process.arch === 'arm64') {
       try {
-        return require('./cacache-ts.android-arm64.node')
+        return require('./cacache.android-arm64.node')
       } catch (e) {
         loadErrors.push(e)
       }
@@ -85,7 +85,7 @@ function requireNative() {
 
     } else if (process.arch === 'arm') {
       try {
-        return require('./cacache-ts.android-arm-eabi.node')
+        return require('./cacache.android-arm-eabi.node')
       } catch (e) {
         loadErrors.push(e)
       }
@@ -101,7 +101,7 @@ function requireNative() {
   } else if (process.platform === 'win32') {
     if (process.arch === 'x64') {
       try {
-        return require('./cacache-ts.win32-x64-msvc.node')
+        return require('./cacache.win32-x64-msvc.node')
       } catch (e) {
         loadErrors.push(e)
       }
@@ -113,7 +113,7 @@ function requireNative() {
 
     } else if (process.arch === 'ia32') {
       try {
-        return require('./cacache-ts.win32-ia32-msvc.node')
+        return require('./cacache.win32-ia32-msvc.node')
       } catch (e) {
         loadErrors.push(e)
       }
@@ -125,7 +125,7 @@ function requireNative() {
 
     } else if (process.arch === 'arm64') {
       try {
-        return require('./cacache-ts.win32-arm64-msvc.node')
+        return require('./cacache.win32-arm64-msvc.node')
       } catch (e) {
         loadErrors.push(e)
       }
@@ -140,7 +140,7 @@ function requireNative() {
     }
   } else if (process.platform === 'darwin') {
     try {
-        return require('./cacache-ts.darwin-universal.node')
+        return require('./cacache.darwin-universal.node')
       } catch (e) {
         loadErrors.push(e)
       }
@@ -152,7 +152,7 @@ function requireNative() {
 
     if (process.arch === 'x64') {
       try {
-        return require('./cacache-ts.darwin-x64.node')
+        return require('./cacache.darwin-x64.node')
       } catch (e) {
         loadErrors.push(e)
       }
@@ -164,7 +164,7 @@ function requireNative() {
 
     } else if (process.arch === 'arm64') {
       try {
-        return require('./cacache-ts.darwin-arm64.node')
+        return require('./cacache.darwin-arm64.node')
       } catch (e) {
         loadErrors.push(e)
       }
@@ -180,7 +180,7 @@ function requireNative() {
   } else if (process.platform === 'freebsd') {
     if (process.arch === 'x64') {
       try {
-        return require('./cacache-ts.freebsd-x64.node')
+        return require('./cacache.freebsd-x64.node')
       } catch (e) {
         loadErrors.push(e)
       }
@@ -192,7 +192,7 @@ function requireNative() {
 
     } else if (process.arch === 'arm64') {
       try {
-        return require('./cacache-ts.freebsd-arm64.node')
+        return require('./cacache.freebsd-arm64.node')
       } catch (e) {
         loadErrors.push(e)
       }
@@ -209,7 +209,7 @@ function requireNative() {
     if (process.arch === 'x64') {
       if (isMusl()) {
         try {
-        return require('./cacache-ts.linux-x64-musl.node')
+        return require('./cacache.linux-x64-musl.node')
       } catch (e) {
         loadErrors.push(e)
       }
@@ -221,7 +221,7 @@ function requireNative() {
 
       } else {
         try {
-        return require('./cacache-ts.linux-x64-gnu.node')
+        return require('./cacache.linux-x64-gnu.node')
       } catch (e) {
         loadErrors.push(e)
       }
@@ -235,7 +235,7 @@ function requireNative() {
     } else if (process.arch === 'arm64') {
       if (isMusl()) {
         try {
-        return require('./cacache-ts.linux-arm64-musl.node')
+        return require('./cacache.linux-arm64-musl.node')
       } catch (e) {
         loadErrors.push(e)
       }
@@ -247,7 +247,7 @@ function requireNative() {
 
       } else {
         try {
-        return require('./cacache-ts.linux-arm64-gnu.node')
+        return require('./cacache.linux-arm64-gnu.node')
       } catch (e) {
         loadErrors.push(e)
       }
@@ -261,7 +261,7 @@ function requireNative() {
     } else if (process.arch === 'arm') {
       if (isMusl()) {
         try {
-        return require('./cacache-ts.linux-arm-musleabihf.node')
+        return require('./cacache.linux-arm-musleabihf.node')
       } catch (e) {
         loadErrors.push(e)
       }
@@ -273,7 +273,7 @@ function requireNative() {
 
       } else {
         try {
-        return require('./cacache-ts.linux-arm-gnueabihf.node')
+        return require('./cacache.linux-arm-gnueabihf.node')
       } catch (e) {
         loadErrors.push(e)
       }
@@ -287,7 +287,7 @@ function requireNative() {
     } else if (process.arch === 'riscv64') {
       if (isMusl()) {
         try {
-        return require('./cacache-ts.linux-riscv64-musl.node')
+        return require('./cacache.linux-riscv64-musl.node')
       } catch (e) {
         loadErrors.push(e)
       }
@@ -299,7 +299,7 @@ function requireNative() {
 
       } else {
         try {
-        return require('./cacache-ts.linux-riscv64-gnu.node')
+        return require('./cacache.linux-riscv64-gnu.node')
       } catch (e) {
         loadErrors.push(e)
       }
@@ -312,7 +312,7 @@ function requireNative() {
       }
     } else if (process.arch === 'ppc64') {
       try {
-        return require('./cacache-ts.linux-ppc64-gnu.node')
+        return require('./cacache.linux-ppc64-gnu.node')
       } catch (e) {
         loadErrors.push(e)
       }
@@ -324,7 +324,7 @@ function requireNative() {
 
     } else if (process.arch === 's390x') {
       try {
-        return require('./cacache-ts.linux-s390x-gnu.node')
+        return require('./cacache.linux-s390x-gnu.node')
       } catch (e) {
         loadErrors.push(e)
       }
@@ -346,7 +346,7 @@ nativeBinding = requireNative()
 
 if (!nativeBinding || process.env.NAPI_RS_FORCE_WASI) {
   try {
-    nativeBinding = require('./cacache-ts.wasi.cjs')
+    nativeBinding = require('./cacache.wasi.cjs')
   } catch (err) {
     if (process.env.NAPI_RS_FORCE_WASI) {
       loadErrors.push(err)

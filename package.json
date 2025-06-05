@@ -24,7 +24,7 @@
     "index.js"
   ],
   "napi": {
-    "binaryName": "cacache-ts",
+    "binaryName": "cacache",
     "targets": [
       "x86_64-apple-darwin",
       "aarch64-apple-darwin",
@@ -59,7 +59,7 @@
     "version": "napi version"
   },
   "devDependencies": {
-    "@napi-rs/cli": "3.0.0-alpha.86",
+    "@napi-rs/cli": "3.0.0-alpha.87",
     "@oxc-node/core": "^0.0.27",
     "@taplo/cli": "^0.7.0",
     "ava": "^6.2.0",
@@ -70,6 +70,7 @@
     "oxlint": "^0.16.0",
     "prettier": "^3.5.2",
     "tinybench": "^4.0.0",
+    "tsdown": "^0.12.6",
     "typescript": "^5.7.3"
   },
   "lint-staged": {
@@ -104,5 +105,5 @@
     "singleQuote": true,
     "arrowParens": "always"
   },
-  "packageManager": "pnpm@10.11.0"
+  "packageManager": "pnpm@10.11.1"
 }

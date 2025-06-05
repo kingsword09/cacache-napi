@@ -1,0 +1,23 @@
+{
+  "name": "cacache-napi-quansync",
+  "version": "0.0.1",
+  "lock": false,
+  "exports": {
+    ".": "./mod.ts",
+    "./clear": "./src/clear.ts",
+    "./copy": "./src/copy.ts",
+    "./exists": "./src/exists.ts",
+    "./list": "./src/list.ts",
+    "./remove": "./src/remove.ts",
+    "./metadata": "./src/metadata.ts",
+    "./read": "./src/read.ts",
+    "./write": "./src/write.ts"
+  },
+  "imports": {
+    "quansync": "npm:quansync@^0.2.10",
+    "cacache-napi": "npm:cacache-napi@^0.0.1"
+  },
+  "tasks": {
+    "build": "deno run -A ./build.ts"
+  }
+}
